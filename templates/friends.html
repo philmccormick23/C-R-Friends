@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+        .titles {
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>These Be Friends...</h1>
+    <p>-------------------------------------</p>
+    
+    <table>
+        <tr class='titles'>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Occupation</td>
+        </tr>
+    {% for thing in friends %}
+        <tr>
+            <td>{{thing['first_name']}}</td>
+            <td>{{thing['last_name']}}</td>
+            <td>{{thing['occupation']}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    
+    
+    <br>
+    <h2>Add A Friend</h2>
+    <form action="/create_friend" method="post">
+        <p>first name</p>
+        <input type="text" name="first_name">
+        <p>last name</p>
+        <input type="text" name="last_name">
+        <p>Occupation</p>
+        <input type="text" name="occupation">
+        <br>
+        <input type="submit">
+    </form>
+
+</body>
+</html>

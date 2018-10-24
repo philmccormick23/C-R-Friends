@@ -1,0 +1,5 @@
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+File "/Users/phillipmccormick/Documents/CodingDojo/python_stack/myEnvironments/py3Env/lib/python3.7/site-packages/pymysql/connections.py", line 629, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost2' ([Errno 8] nodename nor servname provided, or not known)")
